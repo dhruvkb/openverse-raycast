@@ -65,7 +65,7 @@ async function getAccessToken(clientId: string, clientSecret: string) {
   params.append("grant_type", "client_credentials")
 
   const res = await fetch(TOKEN_ENDPOINT, {
-    method: "GET",
+    method: "POST",
     body: params,
   })
   if (!res.ok) {
